@@ -355,75 +355,41 @@ class universal_test_functions():
         frac2 = 0.5*(x1**2 + x2**2) + 2
         out = -frac1/frac2
         return out
-
-
-
-# # Generate Particles
-# 
+    
+###################################################################
 # The first thing to do is to generate the swarming particles randomly inside the boundaries of the function domain. 
 # The example below is done with "egg" function predefined inside the swarm class with its lower [-512,-515] and upper [512, 512] boundaries. 
 # The number of particles is given as 100, which means we will have a swarm that has 100 particles inside. 
 # The default display mode is off but since we want to visualize what is happening, the display mode changed to "True". 
 # There will be migration in the swarm and its probability parameter is kept as default.
-# 
 # The "egg" function is given as follows.
-# 
 # The global optimum point is at (512,404.2319) with a value of -959.6407.
-# 
-# ![egg.png](attachment:egg.png)
 
-# In[4]:
+######### Generate Particles and Run the code ######################
+# from PSO import * 
+# utf = universal_test_functions()
+# particles = swarm(func=utf.functions['egg'],number_of_particles=100,display=True)
+# particles.update(iteration=100)
 
-
-# Generate Particles
-# particles = swarm(func=fitness_function['egg'],number_of_particles=100,display=True)
-
-
-# In[5]:
-
-
-# Iterate Optimization
-# particles.update(iteration=250)
-
-
-# # The Result
-# 
+############################ The Results ##############################
 # When the results are investigated, followings are obtained as a result:
-# 
 # - Total number of iterations is 310.
-# 
 # - Almost the best result is obtained just in 30 iterations when the plot at the end is examined.
-# 
 # - The best result is obtained at the iteration 101.
-
 # The following sections give extra information about the best position and values.
-# 
 # The best particle is the particle 55 with the position (512, 404.3717) of the value -959.6184, while the second one is the particle 22 with the position 
 # (512, 404.3928) of the value -959.6112
-
-# In[6]:
-
 
 # Best Positions Ever
 # particles.best_position_ever
 
-
-# In[7]:
-
-
 # Best Values Ever
 # particles.fitness_values['best_sorted']
-
-
-# In[8]:
-
 
 # Scatter Plot of the Final Positions
 # plt.scatter([list(particles.best_position.values())[ii]['0'] for ii in range(particles.nop)],
 #             [list(particles.best_position.values())[ii]['1'] for ii in range(particles.nop)])
 
-
-# In[ ]:
 
 
 
