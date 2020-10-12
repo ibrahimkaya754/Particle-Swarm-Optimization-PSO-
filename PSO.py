@@ -254,8 +254,7 @@ class swarm():
 
             for ii in range(self.nop):
                 self.member[str(ii)]['center'] = (int(np.round(self.member[str(ii)]['position']['0'])-self.lowerbounds[0]),
-                                                  int(np.round(self.member[str(ii)]['position']['1'])\
-                                                      +self.upperbounds[0]))
+                                                  int(np.round(self.member[str(ii)]['position']['1'])+self.upperbounds[0]))
                 if self.display:
                     pygame.draw.circle(self.screen,self.BLUE,self.member[str(ii)]['center'],2)
 
